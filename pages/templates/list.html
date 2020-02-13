@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>list views</title>
+  </head>
+  <body>
+    <h1>List of titles: </h1>
+    {% for page in pages %}
+      <a href="{{ page.get_absolute_url }}">
+        <ul>
+          <li>
+          <h1>  {{ page.title }} </h1>
+            <hr>
+          </li>
+        </ul>
+      </a>
+      {% endfor %}
+  </body>
+</html>
